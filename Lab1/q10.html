@@ -1,0 +1,112 @@
+<!-- Q10: Write HTML & CSS code to create registration form into web page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+        .form-container {
+            background-color: white;
+            width: 450px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <div class="form-container">
+        <form>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number">
+
+            <label>Date of Birth</label>
+            <input type="date">
+
+            <label>Gender</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" id="male">
+                <label for="male" style="display:inline; font-weight:normal;">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female" style="display:inline; font-weight:normal;">Female</label>
+                <input type="radio" name="gender" id="other">
+                <label for="other" style="display:inline; font-weight:normal;">Other</label>
+            </div>
+
+            <label>Country</label>
+            <select>
+                <option>Select your country</option>
+                <option>Nepal</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+            </select>
+
+            <label>Address</label>
+            <textarea rows="3" placeholder="Enter your address"></textarea>
+
+            <label>
+                <input type="checkbox" style="width:auto;"> I agree to the Terms & Conditions
+            </label>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- Q11: Write HTML code to display your image into webpage -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: darkblue;
+        }
+        .image-container {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        p {
+            color: gray;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Photo</h1>
+
+    <div class="image-container">
+        <!-- Replace your-image.jpg with your actual image filename -->
+        <img src="my-image.jpg" alt="My Photo">
+        <p>Dristi Shakya</p>
+    </div>
+
+</body>
+</html>
