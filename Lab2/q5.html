@@ -1,0 +1,96 @@
+<!-- Q5: Demonstrate form validation using javascript (user registration form) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form onsubmit="return validate()">
+
+        <label>Full Name:</label><br>
+        <input type="text" id="name"><br>
+        <span id="nameErr" style="color:red;"></span><br>
+
+        <label>Email:</label><br>
+        <input type="text" id="email"><br>
+        <span id="emailErr" style="color:red;"></span><br>
+
+        <label>Phone Number:</label><br>
+        <input type="text" id="phone"><br>
+        <span id="phoneErr" style="color:red;"></span><br>
+
+        <label>Age:</label><br>
+        <input type="text" id="age"><br>
+        <span id="ageErr" style="color:red;"></span><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password"><br>
+        <span id="passwordErr" style="color:red;"></span><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password" id="confirmPassword"><br>
+        <span id="confirmErr" style="color:red;"></span><br>
+
+        <button type="submit">Register</button>
+        <span id="successMsg" style="color:green;"></span>
+
+    </form>
+
+    <script>
+        function validate() {
+            let valid = true;
+
+            // Clear all errors first
+            let errors = ["nameErr","emailErr","phoneErr","ageErr","passwordErr","confirmErr"];
+            errors.forEach(id => document.getElementById(id).innerHTML = "");
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let age = document.getElementById("age").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (name == "") {
+                document.getElementById("nameErr").innerHTML = "Name is required!";
+                valid = false;
+            }
+            if (email == "") {
+                document.getElementById("emailErr").innerHTML = "Email is required!";
+                valid = false;
+            } else if (!email.includes("@")) {
+                document.getElementById("emailErr").innerHTML = "Enter a valid email!";
+                valid = false;
+            }
+            if (phone == "" || phone.length != 10) {
+                document.getElementById("phoneErr").innerHTML = "Enter a valid 10 digit phone number!";
+                valid = false;
+            }
+            if (age == "" || age < 18) {
+                document.getElementById("ageErr").innerHTML = "You must be at least 18 years old!";
+                valid = false;
+            }
+            if (password == "" || password.length < 6) {
+                document.getElementById("passwordErr").innerHTML = "Password must be at least 6 characters!";
+                valid = false;
+            }
+            if (password != confirmPassword) {
+                document.getElementById("confirmErr").innerHTML = "Passwords do not match!";
+                valid = false;
+            }
+
+            if (valid) {
+                document.getElementById("successMsg").innerHTML = "Registration Successful!";
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- Q2: Write a javascript program to get two numbers using the prompt box and display the sum -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of Two Numbers</title>
+</head>
+<body>
+
+    <h1>Sum of Two Numbers</h1>
+    <button onclick="calcSum()">Click to Enter Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function calcSum() {
+            let num1 = Number(prompt("Enter first number:"));
+            let num2 = Number(prompt("Enter second number:"));
+            let sum = num1 + num2;
+            document.getElementById("result").innerHTML = "Sum of " + num1 + " and " + num2 + " = " + sum;
+        }
+    </script>
+
+</body>
+</html>
