@@ -1,0 +1,40 @@
+<!-- Q7: Write a javascript program to validate email addresses using regular expressions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Validation</title>
+</head>
+<body>
+
+    <h1>Email Validation</h1>
+
+    <label>Enter Email:</label><br>
+    <input type="text" id="email" placeholder="example@email.com"><br>
+    <span id="result" style="color:red;"></span><br><br>
+    <button onclick="validateEmail()">Validate</button>
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let result = document.getElementById("result");
+
+            // Regular expression for email validation
+            let regex = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (email == "") {
+                result.style.color = "red";
+                result.innerHTML = "❌ Email is required!";
+            } else if (regex.test(email)) {
+                result.style.color = "green";
+                result.innerHTML = "Valid Email!";
+            } else {
+                result.style.color = "red";
+                result.innerHTML = "Invalid Email!";
+            }
+        }
+    </script>
+
+</body>
+</html>
