@@ -1,0 +1,36 @@
+<!-- Q13: Create a button that sequentially animates the width, height, and opacity of a div element when clicked -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sequential Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>Sequential Animation</h1>
+    <button id="animateBtn">Animate!</button>
+    <button id="resetBtn">Reset</button>
+
+    <br><br>
+
+    <div id="box" style="width:100px; height:100px; background-color:black;"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#animateBtn").click(function() {
+                $("#box")
+                    .animate({ width: "300px" }, 800)
+                    .animate({ height: "300px" }, 800)
+                    .animate({ opacity: 0.2 }, 800);
+            });
+
+            $("#resetBtn").click(function() {
+                $("#box").animate({ width: "100px", height: "100px", opacity: 1 }, 800);
+            });
+        });
+    </script>
+
+</body>
+</html>
