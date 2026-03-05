@@ -1,0 +1,28 @@
+<!-- Q4: Write a javascript program to add all even numbers from 1 to 25 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum of Even Numbers</title>
+</head>
+<body>
+
+    <h1>Sum of Even Numbers from 1 to 25</h1>
+    <button onclick="sumEven()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function sumEven() {
+            let sum = 0;
+            for (let i = 1; i <= 25; i++) {
+                if (i % 2 == 0) {
+                    sum += i;
+                }
+            }
+            document.getElementById("result").innerHTML = "Sum of even numbers from 1 to 25 = " + sum;
+        }
+    </script>
+
+</body>
+</html>

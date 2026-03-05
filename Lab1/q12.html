@@ -1,0 +1,173 @@
+<!-- Q12: Write HTML & CSS code to create your CV into webpage -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .cv-container {
+            width: 750px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .header h1 {
+            font-size: 28px;
+        }
+        .header p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        h2 {
+            color: darkblue;
+            border-bottom: 2px solid darkblue;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+        }
+        p, li {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            background-color: darkblue;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .two-col {
+            display: flex;
+            gap: 20px;
+        }
+        .two-col div {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Your Name</h1>
+            <p>Email: shakyadristi2@email.com | Phone: 9767477463 | Location: Kathmandu, Nepal</p>
+        </div>
+
+        <!-- Objective -->
+        <h2>Objective</h2>
+        <p>A passionate Computer Science student eager to apply my knowledge and skills in web development and software engineering to contribute to innovative projects.</p>
+
+        <!-- Education -->
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>BSc.CSIT</td>
+                <td>Padmakanya Multiple Campus</td>
+                <td>2023 - Present</td>
+                <td>Running</td>
+            </tr>
+            <tr>
+                <td>+2 Science</td>
+                <td>Khwopa Higher Secondary School</td>
+                <td>2021 - 2023</td>
+                <td>GPA 3.42</td>
+            </tr>
+            <tr>
+                <td>SEE</td>
+                <td>Manakamana English Secondary School</td>
+                <td>2021</td>
+                <td>GPA 4.00</td>
+            </tr>
+        </table>
+
+        <!-- Skills and Subjects -->
+        <div class="two-col">
+            <div>
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Database Management</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Subjects</h2>
+                <ul>
+                    <li>DAA</li>
+                    <li>Web Technology</li>
+                    <li>Cryptography</li>
+                    <li>SAM</li>
+                    <li>Multimedia</li>
+                    <li>SAD</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Personal Portfolio Website</strong> - A responsive portfolio website built using HTML and CSS</li>
+            <li><strong>Student Management System</strong> - A database driven application built using Python</li>
+        </ul>
+
+        <!-- Hobbies -->
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Coding and Web Development</li>
+            <li>Reading Tech Blogs</li>
+            <li>Gaming</li>
+        </ul>
+
+        <!-- Declaration -->
+        <h2>Declaration</h2>
+        <p>I hereby declare that all the information provided above is true and correct to the best of my knowledge.</p>
+        <br>
+        <p><strong>Dristi Shakya</strong></p>
+        <p>Date: 2025</p>
+
+    </div>
+
+</body>
+</html>

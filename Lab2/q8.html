@@ -1,0 +1,94 @@
+<!-- Q8: Write javascript functions to handle cookie operations: setCookie, getCookie, and deleteCookie -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Operations</title>
+</head>
+<body>
+
+    <h1>Cookie Operations</h1>
+
+    <h3>Set Cookie</h3>
+    <label>Name:</label><br>
+    <input type="text" id="cookieName" placeholder="Enter cookie name"><br><br>
+    <label>Value:</label><br>
+    <input type="text" id="cookieValue" placeholder="Enter cookie value"><br><br>
+    <label>Expires in (days):</label><br>
+    <input type="number" id="cookieDays" placeholder="Enter days"><br><br>
+    <button onclick="setCookie()">Set Cookie</button>
+    <span id="setResult" style="color:green;"></span>
+
+    <h3>Get Cookie</h3>
+    <input type="text" id="getCookieName" placeholder="Enter cookie name"><br><br>
+    <button onclick="getCookie()">Get Cookie</button>
+    <span id="getResult" style="color:blue;"></span>
+
+    <h3>Delete Cookie</h3>
+    <input type="text" id="deleteCookieName" placeholder="Enter cookie name"><br><br>
+    <button onclick="deleteCookie()">Delete Cookie</button>
+    <span id="deleteResult" style="color:red;"></span>
+
+    <script>
+        function setCookie() {
+            let name = document.getElementById("cookieName").value;
+            let value = document.getElementById("cookieValue").value;
+            let days = document.getElementById("cookieDays").value;
+
+            if (name == "" || value == "" || days == "") {
+                document.getElementById("setResult").innerHTML = "❌ All fields are required!";
+                document.getElementById("setResult").style.color = "red";
+                return;
+            }
+
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+
+            document.getElementById("setResult").style.color = "green";
+            document.getElementById("setResult").innerHTML = "✅ Cookie set successfully!";
+        }
+
+        function getCookie() {
+            let name = document.getElementById("getCookieName").value;
+
+            if (name == "") {
+                document.getElementById("getResult").innerHTML = "❌ Enter a cookie name!";
+                document.getElementById("getResult").style.color = "red";
+                return;
+            }
+
+            let cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.startsWith(name + "=")) {
+                    let value = cookie.substring(name.length + 1);
+                    document.getElementById("getResult").style.color = "blue";
+                    document.getElementById("getResult").innerHTML = "✅ " + name + " = " + value;
+                    return;
+                }
+            }
+
+            document.getElementById("getResult").style.color = "red";
+            document.getElementById("getResult").innerHTML = "❌ Cookie not found!";
+        }
+
+        function deleteCookie() {
+            let name = document.getElementById("deleteCookieName").value;
+
+            if (name == "") {
+                document.getElementById("deleteResult").innerHTML = "❌ Enter a cookie name!";
+                return;
+            }
+
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+
+            document.getElementById("deleteResult").style.color = "green";
+            document.getElementById("deleteResult").innerHTML = "✅ Cookie deleted successfully!";
+        }
+    </script>
+
+</body>
+</html>

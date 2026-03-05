@@ -1,0 +1,46 @@
+<!-- Q4: Write HTML and CSS code to demonstrate different types of CSS - Inline, Internal and External -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Types of CSS</title>
+
+    <!-- Internal/Embedded CSS -->
+    <style>
+        h2 {
+            color: green;
+            text-align: center;
+        }
+        p.internal {
+            font-size: 18px;
+            background-color: lightyellow;
+            padding: 10px;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q4style.css">
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: red; text-align: center;">Inline CSS</h1>
+    <p style="font-size: 20px; background-color: lightblue; padding: 10px;">
+        This paragraph is styled using Inline CSS.
+    </p>
+
+    <!-- Internal CSS -->
+    <h2>Internal / Embedded CSS</h2>
+    <p class="internal">
+        This paragraph is styled using Internal CSS written inside the style tag in the head section.
+    </p>
+
+    <!-- External CSS -->
+    <h2 class="external-heading">External CSS</h2>
+    <p class="external">
+        This paragraph is styled using External CSS written in a separate file called q4style.css.
+    </p>
+
+</body>
+</html>

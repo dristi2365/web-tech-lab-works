@@ -1,0 +1,23 @@
+<!-- Q3: Write a JS program to display Current Date and Time -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Date and Time</title>
+</head>
+<body>
+
+    <h1>Current Date and Time</h1>
+    <button onclick="showDateTime()">Get Date & Time</button>
+    <p id="result"></p>
+
+    <script>
+        function showDateTime() {
+            let now = new Date();
+            document.getElementById("result").innerHTML = now.toLocaleString();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* External CSS */
+
+.external-heading {
+    color: purple;
+    text-align: center;
+}
+
+.external {
+    font-size: 18px;
+    background-color: lightgreen;
+    padding: 10px;
+}

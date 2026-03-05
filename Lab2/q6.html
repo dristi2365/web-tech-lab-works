@@ -1,0 +1,29 @@
+<!-- Q6: Write a program to demonstrate the use of array and foreach loop in javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array and ForEach Loop</title>
+</head>
+<body>
+
+    <h1>Array and ForEach Loop</h1>
+    <button onclick="showArray()">Show Array</button>
+    <p id="result"></p>
+
+    <script>
+        function showArray() {
+            let subjects = ["DAA", "Web Technology", "Cryptography", "SAM", "Multimedia", "SAD"];
+            let output = "<b>Subjects:</b><br>";
+
+            subjects.forEach(function(subject, index) {
+                output += (index + 1) + ". " + subject + "<br>";
+            });
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

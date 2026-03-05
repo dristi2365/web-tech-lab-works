@@ -1,0 +1,46 @@
+<!-- Q12: Create a simple image slider with next and previous buttons -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slider</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h1>Image Slider</h1>
+
+    <button id="prevBtn">&#8592; Previous</button>
+    <button id="nextBtn">Next &#8594;</button>
+
+    <br><br>
+
+    <img id="slider" src="img1.jpg" width="400px">
+
+    <p id="counter"></p>
+
+    <script>
+        $(document).ready(function() {
+            let images = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+            let current = 0;
+
+            // Show initial counter
+            $("#counter").html("Image " + (current + 1) + " of " + images.length);
+
+            $("#nextBtn").click(function() {
+                current = (current + 1) % images.length;
+                $("#slider").attr("src", images[current]);
+                $("#counter").html("Image " + (current + 1) + " of " + images.length);
+            });
+
+            $("#prevBtn").click(function() {
+                current = (current - 1 + images.length) % images.length;
+                $("#slider").attr("src", images[current]);
+                $("#counter").html("Image " + (current + 1) + " of " + images.length);
+            });
+        });
+    </script>
+
+</body>
+</html>
