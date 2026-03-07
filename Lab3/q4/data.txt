@@ -1,0 +1,5 @@
+John,20,BSc CSIT
+Jane,21,BCA
+Ram,22,BIT
+Sita,20,MCA
+Harry,23,BSc CSIT
