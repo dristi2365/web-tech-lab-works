@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Q8: XML document validated using DTD -->
+
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (name, address, rollno)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT rollno (#PCDATA)>
+]>
+<students>
+    <student>
+        <name>Ram Sharma</name>
+        <address>Kathmandu, Nepal</address>
+        <rollno>3001</rollno>
+    </student>
+    <student>
+        <name>Sita Thapa</name>
+        <address>Pokhara, Nepal</address>
+        <rollno>3002</rollno>
+    </student>
+</students>

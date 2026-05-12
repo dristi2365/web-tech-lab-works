@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Q5: XML to store at least 4 songs with details -->
+
+<songs>
+    <song>
+        <name>Bohemian Rhapsody</name>
+        <singer>Freddie Mercury</singer>
+        <composedby>Freddie Mercury</composedby>
+        <length>5:55</length>
+    </song>
+    <song>
+        <name>Shape of You</name>
+        <singer>Ed Sheeran</singer>
+        <composedby>Ed Sheeran</composedby>
+        <length>3:53</length>
+    </song>
+    <song>
+        <name>Blinding Lights</name>
+        <singer>The Weeknd</singer>
+        <composedby>Abel Tesfaye</composedby>
+        <length>3:20</length>
+    </song>
+</songs>

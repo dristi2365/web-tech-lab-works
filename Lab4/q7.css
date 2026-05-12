@@ -1,0 +1,9 @@
+contact { display: block; margin: 20px; }
+name { display: block; 
+    font-size: 24px; font-weight: bold; 
+    color: red; font-family: Georgia, serif; }
+street, city, email, phone { 
+    display: block; 
+    color: green; 
+    font-family: Georgia, serif; 
+}

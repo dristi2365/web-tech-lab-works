@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Q2: XML file to display Employee information -->
+<employees>
+    <employee><name>Ram Sharma</name><address>Kathmandu</address><phone>9841234567</phone><designation>Software Engineer</designation><salary>50000</salary></employee>
+    <employee><name>Sita Thapa</name><address>Pokhara</address><phone>9857654321</phone><designation>Web Developer</designation><salary>45000</salary></employee>
+</employees>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Q7: XML with CSS to display contact details -->
+<?xml-stylesheet type="text/css" href="q7.css"?>
+<contacts>
+    <contact><name>James Smith</name><street>101 South Street</street>
+    <city>Halifax</city><email>james@dal.ca</email><phone>4940001</phone></contact>
+    <contact><name>Tom White</name><street>202 Victoria Road</street>
+    <city>Dartmouth</city><email>tom@dal.ca</email><phone>4940002</phone></contact>
+</contacts>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Q1: Write an XML file which will display the Book information -->
+
+<books>
+
+    <book>
+        <title>Introduction to Algorithms</title>
+        <author>Thomas H. Cormen</author>
+        <isbn>978-0262033848</isbn>
+        <publisher>MIT Press</publisher>
+        <edition>3rd</edition>
+        <price>$85.00</price>
+    </book>
+
+    <book>
+        <title>Web Technology</title>
+        <author>Chris Bates</author>
+        <isbn>978-0470017616</isbn>
+        <publisher>Wiley</publisher>
+        <edition>3rd</edition>
+        <price>$45.00</price>
+    </book>
+
+    <book>
+        <title>Database System Concepts</title>
+        <author>Abraham Silberschatz</author>
+        <isbn>978-0073523323</isbn>
+        <publisher>McGraw Hill</publisher>
+        <edition>6th</edition>
+        <price>$75.00</price>
+    </book>
+
+</books>

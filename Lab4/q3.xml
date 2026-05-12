@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Q3: Valid XML to validate book details -->
+<books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="q3.xsd">
+    <book isbn="978-0262033848">
+        <name><firstname>Introduction</firstname><middlename>to</middlename><lastname>Algorithms</lastname></name>
+        <author>Thomas Cormen</author><author>Charles Leiserson</author>
+        <pageno>1292</pageno><price>850</price>
+    </book>
+</books>
